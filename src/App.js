@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { faker } from "@faker-js/faker";
+import {FixedSizeList}  from "react-window";
+import App_P242_loadlikefetchhook from 'App_P242_loadlikefetchhook';
+import {useIterator} from "hooks/useIterator";
+import RepoMenu from "components/RepoMenu"
+import GitUserByFetch from 'components/GitUserByFetch';
+import GitUserRepositories from 'components/GitUserRepositories';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GitUserByFetch loginId={`companykim`} />
   );
 }
 
