@@ -24,6 +24,6 @@ export default function GitRepositoryReadme ({loginId, repo}) {
     if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>; 
 
     return (
-        <ReactMarkdown source={markdown} />
+        <ReactMarkdown children={markdown} />
     )
 }
